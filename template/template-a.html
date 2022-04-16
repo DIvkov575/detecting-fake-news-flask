@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h1>Check for fake news and articles with 93% Accuracy</h1>
+    <h3>Best if used on contemporary and reasonable topics</h3>
+
+
+    <form class="grid" action="/" method="POST">
+
+        {% if input_1 %}<p>{{input_1}}</p>{% endif %}
+
+        <input
+                type="text"
+                name="input_1"
+                id="input_1"
+                placeholder="Enter text form article here, maxlength 10000"
+                required />
+
+        <input
+                type="submit"
+                name="Check"
+                value="Submit"
+
+        />
+
+    </form>
+</div>
+</body>
+</html>
