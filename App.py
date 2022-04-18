@@ -36,9 +36,7 @@ def output():
     tfidf_out = tfidf_vectorizer.transform([text])
     result = str(pac.predict(tfidf_out))
 
-    # print(result[2:-2], file=sys.stderr)
-
-    return render_template('template-b-post-submit.html', result=result[2:-2], full_input_text=input_1)
+    return render_template('template-b-post-submit.html', result=result[2:-2], full_input_text=text)
 
 
 if __name__ == '__main__':
