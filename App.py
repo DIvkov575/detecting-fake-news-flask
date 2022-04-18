@@ -3,6 +3,8 @@ import pickle
 import sys
 from bs4 import BeautifulSoup
 import requests
+import urllib
+import re
 
 app = Flask(__name__, template_folder='./template/')
 
@@ -31,16 +33,15 @@ def output():
     soup = BeautifulSoup(html_page, 'html.parser'
                                     '')
     text = soup.find_all(text=True)
-    # see result format + figure out which ouputs needed
 
 
+    print(text, file=sys.stderr)
 
-
-    input_1 = ""
-    tfidf_out = tfidf_vectorizer.transform([text])
-    result = str(pac.predict(tfidf_out))
-
-    # print(result[2:-2], file=sys.stderr)
+    # input_1 = ""
+    # tfidf_out = tfidf_vectorizer.transform([text])
+    # result = str(pac.predict(tfidf_out))
+    #
+    # # print(result[2:-2], file=sys.stderr)
 
     return render_template('template-b-post-submit.html', result=result[2:-2], full_input_text=input_1)
 
