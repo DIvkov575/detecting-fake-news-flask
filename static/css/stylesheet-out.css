@@ -1,0 +1,31 @@
+body {
+    background-color: #1c1c1c;
+    text-align: center;
+    align-content: center;
+
+}
+
+.div1 {
+    background-color : #9d9d9d;
+    margin: 50px;
+    width : 1250px;
+    display: inline-block;
+    height : 1225px;
+}
+
+.div2 {
+    background-color: white;
+    border: solid black 1px;
+    margin : 25px;
+    width : 1200px;
+    height : 1100px;
+
+}
+
+.div3_text_warp {
+    width : 1150px
+}
+
+span {
+    font-weight: bold;
+}
