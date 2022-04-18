@@ -23,25 +23,20 @@ def main():
 
 @app.route('/output', methods=['POST', 'GET'])
 def output():
-    global pac, tfidf
+    global pac, tfidf_vectorizer
 
     input_raw = request.form.to_dict()
     url_link = input_raw['input_1']
 
     res = requests.get(url_link)
     html_page = res.content
-    soup = BeautifulSoup(html_page, 'html.parser'
-                                    '')
-    text = soup.find_all(text=True)
+    soup = BeautifulSoup(html_page, 'html.parser')
+    text = soup.get_text()
 
+    tfidf_out = tfidf_vectorizer.transform([text])
+    result = str(pac.predict(tfidf_out))
 
-    print(text, file=sys.stderr)
-
-    # input_1 = ""
-    # tfidf_out = tfidf_vectorizer.transform([text])
-    # result = str(pac.predict(tfidf_out))
-    #
-    # # print(result[2:-2], file=sys.stderr)
+    # print(result[2:-2], file=sys.stderr)
 
     return render_template('template-b-post-submit.html', result=result[2:-2], full_input_text=input_1)
 
