@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+<!--    <link rel="stylesheet" href="../static/css/stylesheet-out.css">-->
+
 </head>
 <body>
-    <p>submitted</p>
-    {% if input_1 %}<p>{{input_1}}</p>{% endif %}
+    <div class="div1">
+        {% if result %}<p>93% chance of content being <span>{{result}}</span></p>{% endif %}
+
+        <form class="grid" action="/">
+            <input
+                type="submit"
+                name="Test-next"
+                value="Test Next"
+            />
+        </form>
+
+        <div class="div2">
+            <div class="div3_text_warp">
+            {% if full_input_text %}<p>{{full_input_text}}</p>{% endif %}
+            </div>
+
+        </div>
+    </div>
 </body>
 </html>
