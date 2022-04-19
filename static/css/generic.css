@@ -1,0 +1,36 @@
+
+body {
+    background-color: #1c1c1c;
+    text-align: center;
+    align-content: center;
+
+}
+
+.div1 {
+    background-color : #9d9d9d;
+    margin: 40px;
+    display: inline-block;
+
+
+}
+
+.div2 {
+    background-color: white;
+    border: solid black 1px;
+    margin : 25px;
+    height : 750px;
+    width : 1200px;
+}
+
+.div3_text_warp {
+    display: inline-block;
+
+    width : 1150px
+}
+
+h2 {
+    margin:5px;
+}
+h4 {
+    margin:5px;
+}

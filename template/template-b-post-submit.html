@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-<!--    <link rel="stylesheet" href="../static/css/stylesheet-out.css">-->
+    <link rel="stylesheet" href="../static/css/generic.css">
 
 </head>
 <body>
-    <div class="div1">
-        {% if result %}<p>93% chance of content being <span>{{result}}</span></p>{% endif %}
+    <div class="div1" style="height:1300px; width:1250px">
+        <b>{% if link %}<p>{{link}}</p>{% endif %}</b>
+
+        {% if result %}<p>93% chance of content being <span style="font-weight: bold">{{result}}</span></p>{% endif %}
 
         <form class="grid" action="/">
             <input
@@ -18,7 +20,7 @@
             />
         </form>
 
-        <div class="div2">
+        <div class="div2" style="height:1140px; width:1200px">
             <div class="div3_text_warp">
             {% if full_input_text %}<p>{{full_input_text}}</p>{% endif %}
             </div>
