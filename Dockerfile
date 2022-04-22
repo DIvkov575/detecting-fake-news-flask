@@ -1,17 +1,15 @@
-FROM ubuntu:20.04
+# syntax=docker/dockerfile:1
+
+FROM python:3.8-slim-buster
 
 MAINTAINER Dmitriy Ivkov "Dmitriy@ivkov.net"
 
-RUN apt-get update -y && \
-apt-get install -y python3-pip python-dev
-
-COPY ./requirements.txt /app/requirements.txt
-
 WORKDIR /app
 
+COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
-COPY . /app
+COPY . .
 
 ENTRYPOINT [ "python" ]
 
